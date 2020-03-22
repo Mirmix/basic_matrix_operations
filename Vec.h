@@ -1,6 +1,5 @@
 #include "Mat.cpp"
 
-
 template <typename Scalar>
 class Vector : public Matrix<Scalar>
 {
@@ -9,5 +8,11 @@ public:
     Vector(const Matrix<Scalar> &rhs);
     Scalar norm();
     Vector<Scalar> normalize();
+
+    Scalar &operator()(const size_t &row);
+    const Scalar &operator()(const size_t &row) const;
+
+    Matrix<Scalar> hat();
     Scalar dotProduct(Vector<Scalar> &rhs);
+    Vector<Scalar> crossProduct(Vector<Scalar> &rhs);
 };

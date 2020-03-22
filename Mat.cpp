@@ -109,7 +109,6 @@ Matrix<Scalar> &Matrix<Scalar>::operator+=(const Matrix<Scalar> &rhs)
     return *this;
 }
 
-// Subtraction of this matrix and another
 template <typename Scalar>
 Matrix<Scalar> Matrix<Scalar>::operator-(const Matrix<Scalar> &rhs)
 {
